@@ -2,6 +2,6 @@
 using namespace std;
 
 int main () {
-	cout<<"정회형"<<endl;
+	cout<<"Hello world!"<<endl;
 	return 0;
 }
