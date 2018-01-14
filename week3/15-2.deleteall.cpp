@@ -12,7 +12,8 @@ private:
     node *head, *tail;
 public:
     list() {
-        // 링크드리스트를 초기화하는 코드를 작성합니다.
+      head = NULL;
+      tail = NULL;
     }
     void display() {
         node *temp = new node;
@@ -39,17 +40,8 @@ public:
         }
     }
     void del_all() {
-      node *prev = new node;
-      node *curr = new node;
-      curr = head;
-      while (curr->next != NULL) {
-        prev = curr;
-        curr = curr->next;
-      }
-      tail = prev;
-      prev->next = NULL;
-      delete curr;
-      cout << "deleting end number" << endl;
+      head = NULL;
+      tail = NULL;
       }
     };
 int main() {
