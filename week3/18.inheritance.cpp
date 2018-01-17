@@ -41,10 +41,23 @@ private:
     int d;
 };
 
+class child_three : private child {
+public:
+    child_three() {
+        cout << " 세번째 자식 생성자 출력" << endl;
+    }
+    ~child_three() {
+        cout << " 세번째 자식 소멸자 출력" << endl;
+    }
+  private:
+    int e;
+};
+
 int main() {
     parent sample_p;
     child sample_c;
     child_two sample_two;
+    child_three sample_three;
     // 이곳에서 변수를 불러와서 테스트 해보시기 바랍니다.
 
     return 0;
