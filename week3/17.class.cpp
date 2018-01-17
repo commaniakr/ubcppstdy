@@ -29,18 +29,19 @@ int main() {
   cin >> cal.m >> cal.c >> cal.n;
   switch (cal.c){
     case '+':
-      answer = cal.add();
+      cout << "정답은 " << cal.add() << "입니다." << endl;
       break;
     case '-':
-      answer = cal.sub();
+      cout << "정답은 " << cal.sub() << "입니다." << endl;
       break;
     case '*':
-      answer = cal.mul();
+      cout << "정답은 " << cal.mul() << "입니다." << endl;
       break;
     case '/':
-      answer = cal.div();
+      cout << "정답은 " << cal.div() << "입니다." << endl;
       break;
+    default:
+      cout << "오류!" << endl;
   }
-  cout << "정답은 " << answer << "입니다." << endl;
   return 0;
 }
