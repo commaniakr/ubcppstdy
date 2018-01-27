@@ -8,7 +8,7 @@ using namespace std;
 
 struct student {
   string name;
-  int id;
+  string id;
   int score;
 };
 
