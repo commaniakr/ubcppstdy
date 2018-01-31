@@ -1,17 +1,27 @@
 #include <iostream>
-#include <vector>
 #include <string>
 #include <fstream>
-#include <boost/algorithm/string.hpp>
 
 using namespace std;
 
 struct student {
-  string name;
-  string id;
-  int score;
+	char* name = new char[6];
+	int id;
+	int score;
+	student *next;
 };
 
-void import(vector<student> *lst);
-void print();
-void find();
+class scorelist {
+public:
+	student *head, *tail;
+
+	scorelist() {
+		head = NULL;
+		tail = NULL;
+	}
+	bool create();
+	void import();
+	student* find();
+	void print(student *found);
+	int erase(student *found);
+};
